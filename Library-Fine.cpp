@@ -42,3 +42,39 @@ int libraryFine1(int d1, int m1, int y1, int d2, int m2, int y2)
     
     return 0;
 }
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string first_multiple_input_temp;
+    getline(cin, first_multiple_input_temp);
+
+    vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
+
+    int d1 = stoi(first_multiple_input[0]);
+
+    int m1 = stoi(first_multiple_input[1]);
+
+    int y1 = stoi(first_multiple_input[2]);
+
+    string second_multiple_input_temp;
+    getline(cin, second_multiple_input_temp);
+
+    vector<string> second_multiple_input = split(rtrim(second_multiple_input_temp));
+
+    int d2 = stoi(second_multiple_input[0]);
+
+    int m2 = stoi(second_multiple_input[1]);
+
+    int y2 = stoi(second_multiple_input[2]);
+
+    int result = libraryFine(d1, m1, y1, d2, m2, y2);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
